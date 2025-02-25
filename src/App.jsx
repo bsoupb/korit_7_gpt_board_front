@@ -6,9 +6,13 @@ import MainSidebar from "./components/common/MainSidebar/MainSidebar"
 import LoginPage from "./pages/LoginPage/LoginPage"
 import JoinPage from "./pages/JoinPage/JoinPage"
 import { Route, Routes } from "react-router-dom"
+import { useUserMeQuery } from "./queries/userQuery"
 
 function App() {
 
+  const loginUser = useUserMeQuery();
+  
+  loginUser.isLoading
 
   return (
     <>
@@ -20,9 +24,9 @@ function App() {
                 <Route path="/auth/login" element={<LoginPage />} />
                 <Route path="/auth/join" element={<JoinPage />} />
             </Routes>
-            
         </MainContainer>  
       </MainLayout>
+      
     </>
   )
 }
