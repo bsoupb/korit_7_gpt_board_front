@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { joinApi, loginApi } from "../apis/authApi";
+import { joinApi, loginApi, sendAuthMailApi } from "../apis/authApi";
 
 // useMutation(): 데이터를 변경하는 요청 (POST, PUT, DELETE 등) 을 처리
 // 서버에 데이터를 변경하는 요청을 보낼 때 사용
@@ -13,5 +13,11 @@ export const useJoinMutation = () => useMutation({
 export const useLoginMutation = () => useMutation({
     mutationKey: ["loginMutation"],
     mutationFn: loginApi,
+    retry: 0,
+});
+
+export const useSendAuthMailMutation = () => useMutation({
+    mutationKey: ["useSendAuthMailMutation"],
+    mutationFn: sendAuthMailApi,
     retry: 0,
 });

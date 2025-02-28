@@ -84,3 +84,9 @@ export const setButton = css`
         cursor: default;
     }
 `;
+
+export const warningMessage = css`
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #d45555;
+`;

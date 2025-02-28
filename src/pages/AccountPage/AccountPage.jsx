@@ -76,7 +76,7 @@ function AccountPage(props) {
                         <h3 css={s.subTitle}>Email</h3>
                         <p css={s.subContent}>{loginUser?.data?.data.email}</p>
                     </div>
-                    <button css={s.borderButton}>Change email</button>
+                    <button css={s.borderButton} onClick={() => api.post("/api/auth/email", {email: "qotn0327@naver.com"})}>Change email</button>
                 </div>
                 <div css={s.itemGroup}>
                     <div>
