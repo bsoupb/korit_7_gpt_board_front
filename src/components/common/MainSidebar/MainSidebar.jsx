@@ -45,7 +45,7 @@ function MainSidebar(props) {
                                     <div css={s.profileImgBox}>
                                         <img src={`http://localhost:8080/image/user/profile/${loginUserData?.data.profileImg}`} alt="" /> 
                                     </div>
-                                    {loginUserData?.data.nickname}
+                                    <span>{loginUserData?.data.nickname}</span>
                                 </span>
                             </button>
                             </div>

@@ -67,8 +67,18 @@ export const profileImgBox = css`
 export const authText = css`
     display: inline-flex;
     align-items: center;
+    width: 20rem;    
+
     
     & > svg {
         margin-right: 0.5rem;
+    }
+
+    & > span {
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: start;
     }
 `;

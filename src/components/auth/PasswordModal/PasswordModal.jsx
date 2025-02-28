@@ -6,7 +6,6 @@ import { CgPassword } from "react-icons/cg";
 import { useUpdatePasswordMutation } from '../../../mutations/accountMutation';
 import Swal from 'sweetalert2';
 
-// 패스워드 변경시 비밀번호, 비밀번호 확인 일치하게 로직 구현하기
 function PasswordModal({ setOpen }) {
     const passwordMutation = useUpdatePasswordMutation();
     const [ passwordValue, setPasswordValue ] = useState({
