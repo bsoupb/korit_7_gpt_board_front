@@ -113,7 +113,7 @@ function AccountPage(props) {
                         width: "37rem",
                     }
                 }}
-                children={<ChangeEmailModal setOpen={setEmailModalOpen} />}
+                children={<ChangeEmailModal email={loginUser?.data?.data.email} setOpen={setEmailModalOpen} />}
             />
             <ReactModal 
                 isOpen={passwordModalOpen}
